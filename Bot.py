@@ -20,7 +20,7 @@ def get_my_password():
     
 class MyBot:
     def __init__(self):
-        self._username = "Wwwwat"
+        self._username = 'PUT YOUR MAL USERNAME HERE'
         self._password = get_my_password()
         self._state = secrets.token_hex(16)
         self._code_verifier = secrets.token_urlsafe(64)
