@@ -1,6 +1,8 @@
 # episodes_released_watched
 With this script you can create a dataframe where you can see how many episodes have been released for each anime you haven't watched yet. It uses MyAnimeList API and scrapes gogoanime to view if the episodes have been uploaded there already
 
+Before running make sure to replace the 'PUT YOUR ... HERE' with your actual things. For the client id go to https://myanimelist.net/clubs.php?cid=13727
+
 To get your own list, you might need to use OAuth. Follow these steps:
 
 1. Make a server using the python flash library and run it, I suggest using port 5000 as I did the same in the code
