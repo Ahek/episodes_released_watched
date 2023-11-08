@@ -70,17 +70,7 @@ class MyBot:
 
         response = requests.post(url, data)
         print(self._code_verifier)
-        # base_url = 'https://myanimelist.net/v1/oauth2/token'
-        # data = {
-        #     'client_id': self._clientid,
-        #     'code': code,
-        #     'grant_type': 'authorization_code',
-        #     'code_verifier': self._code_verifier,
-        #     'redirect_uri':'127.0.0.1:5000'
-        # }
         
-        
-        # response = requests.post(base_url, data=data, auth = client_auth)
         if response.status_code == 200:
             access_token = response.json()
             return access_token
@@ -89,60 +79,7 @@ class MyBot:
             print(response.url)
             print(f"Error: {response.status_code} - {response.text}")
             return response
-    
-    # def authorize(self):
-    #     authorization_params = {
-    #         "response_type": "code",
-    #         "client_id": self._clientid,
-    #         "state": self._state,
-    #         "redirect_uri": "http://127.0.0.1",
-    #         "code_challenge": self._code_challenge,
-    #         "code_challenge_method": "plain",
-    #         "grant_type":"authorization_code"
-    #     }
-    #     authorization_url = f'https://myanimelist.net/v1/oauth2/authorize?response_type=code&client_id={self._clientid}&state={self._state}&redirect_uri=http://127.0.0.1:8080&code_challenge={self._code_challenge}&code_challenge_method=plain'
-    #     #response = requests.post(authorization_url), data = authorization_params)
-    #     auth = requests.auth.HTTPBasicAuth(self._clientid, "")
-    #     response = requests.get(authorization_url, auth = auth)
-    #     return response
-    #     # if response.status_code == 200:
-    #     #     return response
-    #     # else:
-    #     #     raise RequestError(response)
-    # def authorize2(self):
-    #     client_auth = requests.auth.HTTPBasicAuth(self._clientid, "")
-    #     post_data = {"grant_type": "authorization_code", "username": self._username, "password": self._password}
-    #     headers = {"User-Agent": "ChangeMeClient/0.1 by YourUsername"}
-    #     response = requests.get("https://myanimelist.net/v1/oauth2/authorize", auth=client_auth, data=post_data, headers=headers)
-    #     return response
-    #     # if response.status_code == 200:
-    #     #     return response
-    #     # else:
-    #     #     raise RequestError(response)
-    # def authorize3(self):
-    #     client_auth = requests.auth.HTTPBasicAuth(self._clientid, "")
-    #     post_data = {"grant_type": "authorization_code", "username": self._username, "password": self._password}
-    #     headers = {
-    #         "response_type": "code",
-    #         "client_id": self._clientid,
-    #         "state": self._state,
-    #         "redirect_uri": "http://127.0.0.1",
-    #         "code_challenge": self._code_challenge,
-    #         "code_challenge_method": "plain",
-    #         "grant_type":"authorization_code"
-    #     }
-    #     response = requests.get("https://myanimelist.net/v1/oauth2/authorize", auth=client_auth, data=post_data, headers=headers)
-    #     return response
-    #     # if response.status_code == 200:
-    #     #     return response
-    #     # else:
-    #     #     raise RequestError(response)
-        
-    
 if __name__ == "__main__":
     bot = MyBot()
-    # r = bot.public_request('https://api.myanimelist.net/v2/users/wwwwat/animelist?status=1')
-    # data = r.json()
     authlink = bot.authlink()
     print(f"Authlink:\n{authlink}")
-    #my_list = pd.DataFrame(bot.get_my_list()['data'])
