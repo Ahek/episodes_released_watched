@@ -49,14 +49,6 @@ class MyBot:
         r.raise_for_status()
         return r.json()
     def authlink(self):
-    #Stappen voor OAuth:
-        #1. Maak een server met de python flask library en run de server
-        #2. Ga naar de 0auth link
-        #3. Klik op allow, je gaat nu naar een link die start met 127.0.0.1/...
-        #4. Zet achter de link de poort die je gebruikt. Dus stel je gebruikt port 8000 in het flask script, ga dan naar 127.0.0.1:8000/...
-        #5. Ga terug naar de runnende server. Er is nu iets geprint met de code en de state die jij hebt meegegeven. Kopieëer de code (alleen de code, niet de state)
-        #6. Maak nu een post request waarin je de code submit die je net hebt gekregen
-        #7. Hoop dat er geen errors in het process zaten en je nu de token terug hebt gekregen
         print(self._code_challenge)
         return f'https://myanimelist.net/v1/oauth2/authorize?response_type=code&client_id={self._clientid}&code_challenge={self._code_challenge}&state={self._state}&redirect_uri=127.0.0.1:5000'
     def get_token(self, code):
