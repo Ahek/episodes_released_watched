@@ -35,11 +35,11 @@ class MyBot:
           'Authorization': f'Bearer {mal_access_token}',
         }
         r = requests.get(url, headers = headers)
-        return r
-        # if r.status_code != 200:
-        #     raise RequestError(r)
-        # else:
-        #     data = r.json()
+        if r.status_code != 200:
+            raise RequestError(r)
+        else:
+            data = r.json()
+
         return r
     def get_my_list(self):
         #curl 'https://api.myanimelist.net/v2/users/@me/animelist?fields=list_status&limit=4' \
