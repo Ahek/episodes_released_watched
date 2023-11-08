@@ -1,5 +1,6 @@
 from flask import Flask
 
+#Use this server when authenticating
 app = Flask(__name__)
 
 @app.route('/')
