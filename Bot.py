@@ -48,9 +48,9 @@ class MyBot:
         r = requests.get('https://api.myanimelist.net/v2/users/@me/animelist?fields=list_status&status=watching', headers = my_headers)
         r.raise_for_status()
         return r.json()
-    def authlink(self):
+    def authlink(self, port):
         print(self._code_challenge)
-        return f'https://myanimelist.net/v1/oauth2/authorize?response_type=code&client_id={self._clientid}&code_challenge={self._code_challenge}&state={self._state}&redirect_uri=127.0.0.1:5000'
+        return f'https://myanimelist.net/v1/oauth2/authorize?response_type=code&client_id={self._clientid}&code_challenge={self._code_challenge}&state={self._state}&redirect_uri=127.0.0.1:{port}'
     def get_token(self, code):
         url = 'https://myanimelist.net/v1/oauth2/token'
         data = {
@@ -73,5 +73,5 @@ class MyBot:
             return response
 if __name__ == "__main__":
     bot = MyBot()
-    authlink = bot.authlink()
+    authlink = bot.authlink(5000) #Use the port you used in flask_server.py
     print(f"Authlink:\n{authlink}")
