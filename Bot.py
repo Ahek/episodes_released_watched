@@ -4,7 +4,7 @@ import pandas as pd
 
 class RequestError(Exception):
     '''
-    Error in het geval de request geen 200 terug gaf
+    Error in case the request didn't return a 200
     '''
     def __init__(self, r):
         self._status_code = r.status_code
