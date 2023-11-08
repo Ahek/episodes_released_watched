@@ -33,7 +33,6 @@ class MyBot:
         Ideally you'll be using this one to access your animelist, but this only works if you made your animelist public
         '''
         mal_access_token = 'PUT YOUR ACCESS TOKEN HERE'
-        url = 'https://api.myanimelist.net/v2/users/@me/animelist'
         headers = {
           'Authorization': f'Bearer {mal_access_token}',
         }
