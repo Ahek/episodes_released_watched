@@ -9,7 +9,7 @@ To get your own list, you might need to use OAuth. Follow these steps:
 
 2. Get your OAuth link from the authlink classmethod in MyBot
 
-3. Open the link in the browser and click allow. You'll be redirected to a link starting with 127.0.0.1/...
+3. Open the link in your chrome/edge/firefox/... browser and click allow. You'll be redirected to a link starting with 127.0.0.1/...
 
 4. Change the link in the following way. Let's say you used port 8000 in the script for step 1, change the link into 127.0.0.1:8000/
 
