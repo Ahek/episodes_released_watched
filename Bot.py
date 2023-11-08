@@ -29,7 +29,7 @@ class MyBot:
         self._headers = {'X-MAL-CLIENT-ID': self._clientid}
         self._authtoken = PUT YOUR AUTHTOKEN HERE
     def public_request(self, url):
-        mal_access_token = 'def50200b18a4294067ecfad73bd8f86a6f2e0d3e183f5a8429e040a7f4f0d4a2e9950e46147e7e18527b6d0427b00873fd587c74b671c40b6af89c0981d5cda2d99793b3c3f2cb0b620277231ec43e179b530945b3ff3103cd113c3dc33dede4b09f7bc15e5214ec64438772f402b44b6fc36450e713f37bb2ea3ebbb2502fe0eea8aa6455af4f185c4e2d5afd34c8ed13ec685ecd688ef9082f9231ba5940add9a9f32e12206e24bcddc6bbea2b3812aee14e30cdbbb60d348ee95e9f6e7fed6b9ef690875bb34fc149999b46faf13df7c1f76a6940490bdc04abd47346be484e0874f252aeb5398e73a0d3253fca1c9ced89ab5c3bd3b783ae6c733ef5bbc179ded74fb4a733f18b5136c4a5fe13c0af8db4aaefbf9bff91202ef70198435fd6f66dac1d29540f9eceba2da4b245179bb23569e9c07f150054190125bff59b3126dd3ddb5457d61b5b60c876fa7c9eb0c3386e570369139d64ded459d0a1053da8e10b3bcb40218e64cffe71f01fb404b11e56cb97c1a06ba43a0bc4b8de369c523c5d3ac3bc3f2e4d3c808860fc7bae17717710b5d152a6544fac92dcbc842e81051d3d7f616ae502a2038bd18eaaaff59eea8fb6feb055451d2810f30 HTTP/1.1" 200'
+        mal_access_token = 'PUT YOUR ACCESS TOKEN HERE'
         url = 'https://api.myanimelist.net/v2/users/@me/animelist'
         headers = {
           'Authorization': f'Bearer {mal_access_token}',
