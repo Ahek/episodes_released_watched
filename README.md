@@ -20,3 +20,5 @@ To get your own list, you might need to use OAuth. Follow these steps:
 7. Make a post request to request the token using the get_token method in the bot class
 
 8. give the authtoken classvariable the value of the token
+
+The main one to run is episodes_dataframe, this gives the dataframe anime_tracker_df that tracks the watched and unwatched episiodes
